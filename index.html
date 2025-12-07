@@ -1,0 +1,101 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Sample HTML Page</title> 
+  </head> 
+  <body> 
+    <h1>3d rotating carousel</h1> 
+    <div class="container"> <div class="carousel"> 
+      <div><img src="Paint_Night_Banner.png"></div> 
+      <div><img src="Quiet_Nights_Banner.png"></div> 
+      <div><img src="Photography_Banner.png"></div> 
+      <div><img src="AI_Banner.png"></div> <div><img src="Coding_Program_Banner.png"></div> 
+    </html> 
+      
+      <style> 
+        *, 
+        *:before, 
+        *:after { 
+          box-sizing: border-box; 
+          margin: 0; 
+          padding: 0; 
+          border: none; 
+        } 
+        
+        body{ 
+          width: 100%; 
+          height: 100vh; 
+          text-transform: uppercase; 
+          font-family: "Open sans"; 
+          color: #fff; 
+          background: #222; 
+          
+        } h1{ 
+          margin: 3% 15%;
+          font-size: 100px; 
+          font-weight: bold; 
+          font-style: italic; 
+        } 
+        
+        .container{ 
+          width: 20%; 
+          height: 140px; 
+          position: relative; 
+          margin: 10% auto; 
+          perspective: 1000px; 
+        } 
+        
+        .carousel{ 
+          width: 100%; 
+          height: 100%; 
+          position: absolute; 
+          transform-style: preserve-3d; 
+          animation: rotate 20s infinite linear; 
+          
+          div{ 
+            display: block; 
+            position: absolute; 
+            width: 300px; 
+            height: 175px; 
+            top: 5px; left: 5 px; 
+            box-shadow: 0 0 3px #fff; 
+            -webkit-box-reflect: below 10px linear-gradient (transparent, transparent, #0006); 
+            
+            img{ 
+              width: 100%; 
+              height: 100%; 
+              transition: all 10s ease; 
+              
+              &:hover{ 
+                transform: scale(1.1); 
+              } 
+            } 
+          } 
+          
+          div:nth-child(1){ 
+            transform: rotateY(0deg) translateZ(220px); 
+          } 
+          div:nth-child(2){ 
+            transform: rotateY(90deg) translateZ(220px); 
+          } 
+          div:nth-child(3){ transform: rotateY(180deg) translateZ(220px); 
+          } 
+          div:nth-child(4){ transform: rotateY(270deg) translateZ(220px); 
+          } 
+          div:nth-child(5){ transform: rotateY(360deg) translateZ(220px); } 
+          
+          &:hover{ 
+            animation-play-state: paused; 
+          } 
+        } 
+        @keyframes rotate { 
+          from{ 
+            transform: rotateY(0deg); 
+          } 
+          to{ 
+            transform: rotateY(360deg); 
+          } 
+        } 
+      </style>
