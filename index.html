@@ -15,21 +15,14 @@
 </div>
   <body> 
     <h1>The Shell Library System</h1> 
-          <section id="books">
-      <p class="section__text__p1">New Releases</p>
-      <h1 class="New Releases">New Releases</h1>
-          <img
-            src="book1.jpg"
-          />
-        <img 
-          src ="book2.jpg"
-          />
-        <img src="book3.jpg"
     <div class="container"> <div class="carousel"> 
       <div><img src="Paint_Night_Banner.png"></div> 
       <div><img src="Quiet_Nights_Banner.png"></div> 
       <div><img src="Photography_Banner.png"></div> 
       <div><img src="AI_Banner.png"></div> <div><img src="Coding_Program_Banner.png"></div> 
+<p>
+  <img src="book1.jpg"> &nbsp; <img src="book2.jpg">
+</p>
 </html> 
       
       <style> 
@@ -105,13 +98,19 @@
         background: white;
     }
 
+  p img {
+    width: 50%;
+    height: auto; /* Maintains aspect ratio */
+  }
+        
     h1{
         margin: 3% 15%;
         font-size: 50px;
         font-weight: bold;
         font-style: italic;
     }
-        
+
+      
         .container{ 
           width: 20%; 
           height: 100px; 
